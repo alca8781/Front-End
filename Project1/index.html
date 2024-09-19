@@ -14,20 +14,23 @@
 <body>
     <h1> Spirit Animals </h1>
     <div class="top">
-        <img src="rod.webp"> <br>
+        <img src="Images/rod.webp" alt="hot rod channeling his spirit animals"> <br>
     </div>
 
     <h2> Complete a short quiz to find out what your spirit animal is! <br> <br>
         ---------------------------------------------------------------------------------------------------------------------------------------------
     </h2>
 
-    <div id="AnimalQuiz">
+    <div id="Start"> 
+        <h2> Press 'ENTER' to begin </h2>
+    </div>
 
+    <div id="AnimalQuiz" style="display: none;">
         <div class="question">
             <p>1. Do you prefer warm or cold weather?</p>
 
             <img src="Images/lilo.jpg" alt="lilo and stitch surfing">
-            <img src="Images/snoopy.jpg" alt="snoopy">
+            <img src="Images/snoopy.jpg" alt="snoopy sledding">
             <img src="Images/grumpy.webp" alt="grumpy">
             <br>
 
@@ -71,7 +74,6 @@
             <p> 4. How many siblings do you have?</p>
             <img src="Images/1.jpg" alt="0 siblings">
             <img src="Images/2.jpg" alt="1 sibling">
-            <img src="Images/3.jpg" alt="2 siblings">
             <img src="Images/to many.jpg" alt="to many">
             <br>
 
@@ -124,16 +126,27 @@
         </div>
 
         <br>
-        <button class="submit" data-question="submit" data-answer="submit">SUBMIT</button>
 
-    </div>
-
-    <div class="onSubmit" style="display: none;"> 
-        <h3 id="resultText"></h3>
+    <!-- </div>
+     -->
+    <div id ="theResults"> 
         
+        <button class="SubmitButton">SUBMIT</button>
+       
+        <div class="submitted" style="display: none;"> </div>
+        <div id="yourAnimal"></div>
         <button id="wikiButton" style="display: none"> SEE ANIMAL</button>
+       
     </div>
 
+    </div>
+
+    <div class="bottom"> 
+    <img src="Images/cat.jpg" alt="cat laying down"> 
+    <img src="Images/gold.webp" alt="goldfish">
+    <img src="Images/pand.webp" alt="panda laying on log ">  
+    <img src="Images/wolf.webp" alt="wolf in snow"> 
+    </div>
 </body>
 
 </html>

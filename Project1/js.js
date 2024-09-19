@@ -1,28 +1,48 @@
+// begin quiz 
+// quiz starts when user presses enter key 
+document.addEventListener('keydown', function(event){
+    if(event.key === 'Enter'){
+        document.getElementById('Start').style.display = 'none';  // turns off the directions for start 
+        document.getElementById('AnimalQuiz').style.display = 'block'; // display quiz
+    }
+}); 
 
+// initialize variables
 let HouseCat = 0;
 let Wolf = 0;
 let Panda = 0;
 let Goldfish = 0;
 
-const buttonClick = {};
+const buttonClick = {}; // object for storing animal score
 
+// button clicks for quiz answers 
 document.querySelectorAll('.button').forEach(button => {
     button.addEventListener('click', function () {
-        const questionId = this.getAttribute('data-question');
+        const questionId = this.getAttribute('data-question'); 
 
-        // Disable all buttons for this question
+        // disable buttons to prevent multiple answers by selecting a question ID and all elements with that id and showing as disabled 
         document.querySelectorAll(`.button[data-question="${questionId}"]`).forEach(btn => {
             btn.classList.add('disabled');
-            btn.disabled = true; // Disable the button to prevent further clicks
+            btn.disabled = true; 
         });
 
-        // Add clicked class and change text to 'x'
+        // change button to x to mark as clicked 
         this.classList.add('clicked');
         this.textContent = 'x';
 
-        // Call the appropriate function based on the question ID and answer
+        // user answer from button 
         const answer = this.getAttribute('data-answer');
-        question.find(q => q.hasOwnProperty(questionId))[questionId](answer);
+        question.find(q => q.hasOwnProperty(questionId))[questionId](answer); 
+            // q.hasOwnProperty(questionId))[questionId](answer) = callback func. 
+            // finds object by id, access function, calls with answer 
+
+
+
+        // (I asked chatgpt to help me fix my function so that the user could not answer the same question multiple times and it showed me this.)
+        // for my code this funcion is : 
+        //      finding the question by the data-question="q1" id, 
+        //      accessing the function in JS that is storing the user input as a value to total what animal you are, 
+        //      and then it is using that function with the user input to store the value into the answer array  
     });
 });
 
@@ -32,17 +52,12 @@ const question = [
         q1: function (answer) {
             if (answer === 'a') {
                 HouseCat++;
-
             }
             if (answer === 'b') {
                 Wolf++;
             }
-            console.log(HouseCat);
-            console.log(Wolf);
-            console.log(Panda);
-            console.log(Goldfish);
+            console.log(HouseCat , Wolf, Panda, Goldfish);
         }
-
     },
 
     {
@@ -59,10 +74,7 @@ const question = [
             if (answer === 'd') {
                 Panda++;
             }
-            console.log(HouseCat);
-            console.log(Wolf);
-            console.log(Panda);
-            console.log(Goldfish);
+            console.log(HouseCat , Wolf, Panda, Goldfish);
         }
     },
 
@@ -77,11 +89,7 @@ const question = [
             if (answer === 'c') {
                 HouseCat++;
             }
-            console.log(HouseCat);
-            console.log(Wolf);
-            console.log(Panda);
-            console.log(Goldfish);
-
+            console.log(HouseCat , Wolf, Panda, Goldfish);
         }
     },
 
@@ -105,11 +113,7 @@ const question = [
             if (answer === 'f') {
                 Wolf++;
             }
-            console.log(HouseCat);
-            console.log(Wolf);
-            console.log(Panda);
-            console.log(Goldfish);
-
+            console.log(HouseCat , Wolf, Panda, Goldfish);
         }
     },
 
@@ -124,13 +128,8 @@ const question = [
             if (answer === 'c') {
                 Goldfish++;
             }
-            console.log(HouseCat);
-            console.log(Wolf);
-            console.log(Panda);
-            console.log(Goldfish);
-
+            console.log(HouseCat , Wolf, Panda, Goldfish);
         }
-
     },
 
     {
@@ -144,11 +143,7 @@ const question = [
             if (answer === 'c') {
                 HouseCat++;
             }
-            console.log(HouseCat);
-            console.log(Wolf);
-            console.log(Panda);
-            console.log(Goldfish);
-
+            console.log(HouseCat , Wolf, Panda, Goldfish);
         }
     },
 
@@ -160,56 +155,49 @@ const question = [
             if (answer === 'b') {
                 Wolf++;
             }
-            console.log(HouseCat);
-            console.log(Wolf);
-            console.log(Panda);
-            console.log(Goldfish);
-
-
+            console.log(HouseCat , Wolf, Panda, Goldfish);
         }
     }
 
 ];
 
+// determine result 
 function ShowResults() {
     let result = '';
 
-    // house cat
     if (HouseCat > Wolf && HouseCat > Panda && HouseCat > Goldfish) {
-        result = "You are a house cat";
+        result = "YOU ARE A HOUSE CAT";
     } 
-    // wolf
     else if (Wolf > HouseCat && Wolf > Panda && Wolf > Goldfish) {
-        result = "You are a wolf";
+        result = "YOU ARE A WOLF";
     }
-    // panda 
     else if (Panda > HouseCat && Panda > Wolf && Panda > Goldfish) {
-        result = "You are a panda";
-    }
-    // goldfish  
+        result = "YOU ARE A PANDA";
+    }  
     else if (Goldfish > HouseCat && Goldfish > Panda && Goldfish > Wolf) {
-        result = "You are a goldfish";
+        result = "YOU ARE A GOLDFISH";
     }
-    // tie 
     else if(Panda === Wolf || Panda === Goldfish || Panda === HouseCat || Wolf === Goldfish || Wolf === HouseCat || HouseCat === Goldfish){
-        result = "You are a liger"
+        result = "YOU ARE A LIGER"
     }
     
+    // display 
+    document.querySelector('#yourAnimal').innerText = result;
+    document.querySelector('.submitted').style.display = "block"; 
 
-    document.querySelector('#resultText').innerText = result;
-    document.querySelector('.onSubmit').style.display = "block"; 
-
+    // load wiki page based on result
     const wikiButton = document.getElementById('wikiButton');
     const AnimalPage = {
-        "You are a house cat": "https://en.wikipedia.org/wiki/Cat",
-        "You are a wolf": "https://en.wikipedia.org/wiki/Wolf",
-        "You are a goldfish": "https://en.wikipedia.org/wiki/Goldfish",
-        "You are a panda": "https://en.wikipedia.org/wiki/Giant_panda",
-        "You are a liger": "https://en.wikipedia.org/wiki/Liger"
+        "YOU ARE A HOUSE CAT": "https://en.wikipedia.org/wiki/Cat",
+        "YOU ARE A WOLF": "https://en.wikipedia.org/wiki/Wolf",
+        "YOU ARE A GOLDFISH": "https://en.wikipedia.org/wiki/Goldfish",
+        "YOU ARE A PANDA": "https://en.wikipedia.org/wiki/Giant_panda",
+        "YOU ARE A LIGER": "https://en.wikipedia.org/wiki/Liger"
     };
     
     const Wpage = AnimalPage[result]; 
 
+    // show page as button 
     if (Wpage) {
         wikiButton.style.display = "block";
         wikiButton.addEventListener('click', () => {
@@ -220,7 +208,12 @@ function ShowResults() {
     }
 }
 
-document.querySelector('.submit').addEventListener('click', ShowResults);
+// submit button 
+document.querySelector('.SubmitButton').addEventListener('click', function() {
+    this.classList.add('clicked');
+    this.textContent = 'loading results...';
+    ShowResults(); 
+});  
 
 
 

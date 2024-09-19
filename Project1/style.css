@@ -12,14 +12,11 @@ h2{
     text-align: center;
     font-size: 20px;
 }
-h3{
-    text-align: center;
-    font-size: 20pt;
-    background-color: rgb(45, 77, 147);
-    padding: 20pt;
-    color: white;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+p{
+    font-size: 15px; 
 }
+
 
 .top{
     display: flex; 
@@ -46,10 +43,6 @@ h3{
     margin: 2px; 
 }
 
-p{
-    font-size: 15px;
-    
-}
 .button{ 
     padding: 10px;
     align-items: center;
@@ -59,22 +52,54 @@ p{
     background-color: green;
 }
 
-.submit{
+
+
+
+
+#theResults{
+   display: flex;
+   align-items:center; 
+   gap:100pt;
+   margin-bottom: 20pt;
+
+}
+
+#yourAnimal{
+    font-size: 30pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(48, 109, 69);
+}
+
+
+#wikiButton{
+    background-color: rgb(104, 99, 95);
+    color: white;
+    padding: 10px;
+    
+}
+
+
+.SubmitButton{
     background-color: green;
     color: white; 
     padding: 20px; 
     border: 3px solid white;
     margin-top: 20pt;
+    margin-left: 10pt;
+    margin-bottom: 20pt;
     font-size: 15pt;
 }
 
-
-#wikiButton{
+.bottom{
     display: flex;
-    align-items: center;
-    padding: 10pt; 
-    text-align: center;
-    color:rgb(255, 255, 255); 
-    background-color: rgb(45, 77, 147);
-
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(97, 160, 122);
+    padding: 20px;
+    
+}
+.bottom img{
+    height: 100pt; 
+    margin: 5px;
+    
 }
