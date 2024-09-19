@@ -1,0 +1,166 @@
+
+JavaScript and the DOM 
+----------------------------------
+<script src="path/too/my/script.js"></script
+
+CONSOLE 
+    conlsole.log() 
+        EX: printiong to console = console.log("hello world")
+
+
+    pwd : folder access terminal 
+    cd  : change directory 
+    ..  : go up a file 
+
+LET 
+    - changable variables 
+        let WelloWorldVariable = "hello world";
+        console.log(HelloWorldVariable); 
+
+CONST 
+    - constant variable 
+    - assign something to a variable name 
+    - more memory efficiant 
+
+        ~ declaire variables as const until prompted to change to a let variable 
+
+            const WelloWorldConst = "hello world";
+            console.log(HelloWorldConst); 
+
+
+STRINGS
+    let string = "this is my string"; 
+    let stringwithstrings = 'this is my string"with strings"inside';
+
+
+STRING LITERALS
+    - formatted data injections 
+    - backtick key `` 
+
+        `this person is ${70 - getAge(person)}`
+
+        const number = 7; 
+        const stringLiteral =`this is a string literal`; 
+
+ARRAYS 
+    - known lists 
+    - can always add or subtract from 
+    - index starts at 0 
+
+    let myArray = [ 0,1,2]; 
+
+    - access whole array with : 
+        console.log(myArray); 
+    - access point in array with : 
+        console.log(myArray[2]); 
+    - add to array: 
+        myArray.push('added item')
+
+OBJECTS 
+    - key value pair 
+
+    const myClass = {
+        building: "ATLS", 
+        roomNum: 104
+    };
+
+
+    DOT NOTATION VS BRACKETTING 
+
+        const myClass = {
+            building: "ATLS", 
+            roomNum: 104
+        };
+
+        console.log(myClass); 
+        console.log(myClass.building); 
+
+        console.log(myClass["building"]); 
+
+        myClass.newProperty = 'new value';
+        conlsole.log(thisClassroom); 
+
+CONDITIONALS 
+   
+   ELSE IF 
+
+    const x = 5; 
+    const y = 7; 
+
+    if(x + y == 20 ){
+        // do something 
+    }
+    else {
+        // dont run 
+    }
+
+    WHILE LOOPS 
+
+        be careful of how many times it runs    
+
+        while(condition){
+            // do something 
+        }
+
+
+        let z = 0; 
+        while(z<10){
+            console.log(0); 
+            z++; 
+        }
+
+    FOR LOOP 
+
+        initial statement, condition, update 
+
+            for(let i =0; i < 10;  i++){
+                console.log(i); 
+            }
+    
+    FOR OF LOOP 
+
+       for(const animal of myArray){
+        console.log(animal);
+       }
+    
+    
+    FOR EACH LOOP
+       - takes a callback function 
+
+
+FUNCTIONS 
+    function doSomething( param1, param2){
+        //do something; 
+    }
+
+
+    function addTen(number){
+        return number + 10; 
+    }
+    console.log(addTen(5)); 
+
+
+    FOR EACH FUNCTION 
+
+        function printToConsole(something){
+            console.log(something);
+        }
+        myArray
+
+    
+        ARROW FUNCTION 
+            
+        const printToConsoleARROW = (something)=> {
+            console.log(something); 
+        }
+
+        ANNONYMOUS FUNCTION 
+            - need to 
+
+            (() => { console.log("inside annoymous function")}(); 
+
+            myArray.forEach((animal) => {
+                console.log(animal);
+            });
+
+    

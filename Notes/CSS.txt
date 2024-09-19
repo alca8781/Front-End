@@ -1,0 +1,110 @@
+CSS 
+
+THE BOX 
+    - 4 shells 
+         1. content (innermost)
+         2. padding
+         3. boarder
+         4. margin
+
+        |----------------------------------|
+        |     margin                       |
+        |   |---------------------------|  |
+        |   |      border               |  |  
+        |   |    |------------------|   |  |  
+        |   |    |   padding        |   |  |    
+        |   |    |  --------------  |   |  |
+        |   |    |  |  content   |  |   |  |  
+        |   |    |  --------------  |   |  |
+        |   |    |------------------|   |  |
+        |   |---------------------------|  |
+        |----------------------------------|
+
+
+    border-box 
+        overal dimentions = specified size + margin
+            - must set width and height properties 
+            - width and height properties determine size of the content, padding, and border portion of the box 
+
+    content-box
+        overall dimentions = specified size + padding + border + margin
+            - default style for all box elements 
+            - width and height properties determine size of the content portion of the box 
+
+
+RESPONSIVE DESIGN 
+    - use : rem or em % 
+    - min-width, min-hight, maz-width, max-height
+    - display:flex
+
+
+FLEXBOX 
+    - display:flex; 
+    makes display a flexible layout 
+
+    flex-direction : row | row-reverse | column | column-reverse; 
+
+        flex-direction: row; 
+            - lay children elements in the writing direction of page (L to R)
+        flex-direction: column; 
+            - lay children elements top-to-bottom 
+
+    flex-wrap : wrap | nowrap; 
+        - determins whether or ont children in container are wrapped onto a new line 
+        
+        flex-wrap: wrap; 
+            - default setting 
+            - will wrap children to new line 
+        flex-wrap: nowrap; 
+            - prevent children from wrapping to new line -> flex-shrink instead 
+
+FLEXFLOW 
+    flex-flow: <flex-direction> <flex-wrap>; 
+        - combines properties into one 
+
+        EX: 
+            flex-flow: row nowrap; 
+            flex-flow: column; 
+            flex-flow: column-reverse wrap; 
+            flex-flow: row-reverse nowrap; 
+
+JUSTIFY CONTENT 
+    justify-content: normal | center | start | end | stretch | space-between | space-around | space-evenly: 
+    - controls the position of non-growing children along main axis 
+
+ALIGN ITEMS 
+    align-items: normal | center | start | end | baseline | stretch; 
+    - controls position of all children along cross axis of container 
+
+FLEXBOX CHILD PROPERTIES 
+    flex-basis: <size>; 
+        - determines starting size of an element 
+        - units must be rem,em,px,% 
+        - setting width of child 
+    flex-grow: <number>; 
+        - determines growth reletive to other siblings 
+            child -> flex-grow: 0;   wont grow 
+            child -> flex-grow: 1;   grow to fill extra space 
+            child -> flex-grow: 3;   grow 3x more than any siblings that have flex-grow: 1; 
+                                     grow .5x of siblings with flex-grow: 6; 
+    flex-shrink: <number>; 
+        - determines  shrink relative to other siblings 
+            child -> flex-shrink: 0;   wont shrink 
+            child -> flex-shrink: 1;   shrink to accomodate siblings 
+            child -> flex-shrink: 3;   shrink 3x more than any siblings that have flex-shrink: 1; 
+                                       shrink .5x of siblings with flex-shrink: 6; 
+    
+    flex: <flex-grow> <flex-shrink> <flex-basis>: 
+        - combines properties into 1 
+
+        ex: 
+            flex: 0 1 200px; => flex-grow:0; flex-shrink: 1; flex-basis: 200px; 
+            flex: 1 1; => flex-grow:1; flex-shrink:1; 
+            flex: 2 30rems; => flex-grow:2; flex-basis:30rems; 
+
+
+GRID 
+    display: grid; 
+    grid-template-columns 
+        - defines number and size of columns in grid 
+        - take unlimited number of values seperated by spaces 

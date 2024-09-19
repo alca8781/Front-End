@@ -1,0 +1,60 @@
+User Input 
+
+<form> 
+collection of different form controls 
+
+<fieldset> 
+div that can be used in a form tag to group multiple form elements together 
+    - automatically included accessibility roles 
+    - default styling 
+    
+    <legend>
+    fieldset can be described using a <legend> tag
+
+
+<input>
+versitile element 
+must have a name attribute to help process its data 
+many different types that change how it behaves 
+    - text 
+    - password 
+    - checkbox
+    - radio 
+    - email 
+    - number
+    - range
+    - time 
+    - color 
+    - sibmit 
+
+<label>
+lets user know what each individual element in the form is intended for 
+    have a for attribute -> when tied to id of another element it will link the 2 together
+
+<textarea> create multiline text input 
+<select> create dropdown menu populate with <option> tag (chinldre)
+<datalist> combined w <option> helps create auto-complete options for regular <input type="text"> tags
+<progress> displays progress bar to the user 
+<meter> displays generic meter bar (not progress)
+
+SUBMIT 
+    - create event listener 
+    - in event listener create a new FormData() object 
+    - retrieve data from individual elements using the .get() 
+    - use event.preventDefault() to prevent the "submit" event from refressing the page after you process form data
+
+    const form = document.querySelector("form")
+    form.addEventListener("submit", (event)) => {
+        const formData = new FormData(form);
+        console.log(formData.get("username"));
+        event.preventDefault();
+    }
+
+PROCESSING
+    - add a "change" or "input" event listener to the form element 
+    - retrieve using value property 
+
+    const textInput = document.querySelector("input[type=text]");
+    textInput.addEventListener("change", () =>{
+        console.log(textInput.value);
+    });

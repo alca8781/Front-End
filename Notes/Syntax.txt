@@ -1,0 +1,25 @@
+SYNTAX 
+
+    ===
+        equality check 
+
+    ==  
+        type-cast variables before checking equality 
+
+
+    OPERATORS 
+        +       addition    
+        -       substraction 
+        *       multiplication 
+        /       division 
+        ++      increment 1
+        --      decriment 1
+        **      exponent            2**4   =16     -> 2^4=16 
+        %       remainder           12%5   =2       num1 / num2 = remander 
+
+        +=      addition assignment                ex: myValue += 2 
+        -+      sumbtraction assignment            ex: myValue -= 2 
+        *=      multiplication assignment          ex: myValue *= 2
+        /=      division assignment                ex: myValue /= 2
+        **=     exponent assignment                ex: myValue **= 2
+        %=      remainder assignment               ex: myValue %= 2

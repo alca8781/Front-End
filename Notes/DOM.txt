@@ -1,0 +1,60 @@
+DOM
+--------------------------
+how JavaScript interacts with HTML and CSS 
+
+js has to be running after the rest of doc has been loaded in order for entired DOM to work 
+
+top to bottom reading 
+
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+            <title>Hello World</title>
+            <link rel="stylesheet" href="aug27.css">
+        
+            <script src="script.js" defer></script>  // makes script run at the end but leaving the line in the head 
+
+        </head>
+        <body>
+            <h1>Hello world!</h1>
+
+            
+        </body>
+
+        </html>
+
+document.getElementsById("some-id") // retrieves element with the id 
+dociment.getElementsByClassName("some-class-name") // retrieves list of elements with some-class-name
+document.querySelector('#some-id') // retrieves the element with the id "some-id"
+document.querySelector(".some-class-name") // 
+document.querySelectorAll(".some-class-name") 
+
+        <body>
+        <h1>SEPT 5</h1>
+        <p id = "first-para" class = "my-para"> lorem ipsom>
+        <p class= "my-para"> Lorem ipsom
+
+        </body>
+
+        const MyPara = document.getElementsByClassName("my-para")
+
+
+
+EVENTS & EVENTLISTENERS 
+
+    element.addeventlistener(event, callback); 
+
+    html : 
+
+    button type="button"
+
+    js :
+    const changeLinkButton = document.querySelector('#randomlink'); 
+    link.herf = 'www.google'; 
+
+    const changeLinkButton = document.querySelector('#change')
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js" defer></script>
+
+    <title>Javascript and the DOM</title>
+</head>
+
+<body>
+    <h1> Spirit Animals </h1>
+    <div class="top">
+        <img src="rod.webp"> <br>
+    </div>
+
+    <h2> Complete a short quiz to find out what your spirit animal is! <br> <br>
+        ---------------------------------------------------------------------------------------------------------------------------------------------
+    </h2>
+
+    <div id="AnimalQuiz">
+
+        <div class="question">
+            <p>1. Do you prefer warm or cold weather?</p>
+
+            <img src="Images/lilo.jpg" alt="lilo and stitch surfing">
+            <img src="Images/snoopy.jpg" alt="snoopy">
+            <img src="Images/grumpy.webp" alt="grumpy">
+            <br>
+
+            <button class="button" data-question="q1" data-answer="a">warm</button>
+            <button class="button" data-question="q1" data-answer="b">cold</button>
+            <button class="button" data-question="q1" data-answer="c">i dont like either</button>
+            <br><br><br>
+        </div>
+
+        <div class="question">
+            <p> 2. What is the superior color? </p>
+
+            <img src="Images/red.png" alt="red">
+            <img src="Images/blue.webp" alt="blue">
+            <img src="Images/green.png" alt="green">
+            <img src="Images/purple.webp" alt="purple">
+            <br>
+
+            <button class="button" data-question="q2" data-answer="a">red</button>
+            <button class="button" data-question="q2" data-answer="b">blue</button>
+            <button class="button" data-question="q2" data-answer="c">green</button>
+            <button class="button" data-question="q2" data-answer="d">purple</button>
+            <br><br><br>
+        </div>
+
+        <div class="question">
+            <p>3. Would you rather watch a movie or go for a hike?</p>
+
+            <img src="Images/movie.webp" alt="watching movie">
+            <img src="Images/hike.jpg" alt="hiking">
+            <img src="Images/no.webp" alt="no thanks">
+            <br>
+
+            <button class="button" data-question="q3" data-answer="a">watch a movie</button>
+            <button class="button" data-question="q3" data-answer="b">go for a hike</button>
+            <button class="button" data-question="q3" data-answer="c">neither, both sound gross</button>
+            <br><br><br>
+        </div>
+
+        <div class="question">
+            <p> 4. How many siblings do you have?</p>
+            <img src="Images/1.jpg" alt="0 siblings">
+            <img src="Images/2.jpg" alt="1 sibling">
+            <img src="Images/3.jpg" alt="2 siblings">
+            <img src="Images/to many.jpg" alt="to many">
+            <br>
+
+            <button class="button" data-question="q4" data-answer="a">0</button>
+            <button class="button" data-question="q4" data-answer="b">1</button>
+            <button class="button" data-question="q4" data-answer="c">2</button>
+            <button class="button" data-question="q4" data-answer="d">3</button>
+            <button class="button" data-question="q4" data-answer="e">to many</button>
+            <button class="button" data-question="q4" data-answer="f">other</button>
+            <br><br><br>
+        </div>
+
+        <div class="question">
+            <p> 5. Coffee or Hot Coffee?</p>
+
+            <img src="Images/hot.jpg" alt="hot coffee">
+            <img src="Images/iced .webp" alt="iced coffee">
+            <img src="Images/buddy.webp" alt="buddy the elf drinking coffee">
+            <br>
+
+            <button class="button" data-question="q5" data-answer="a">iced</button>
+            <button class="button" data-question="q5" data-answer="b">hot</button>
+            <button class="button" data-question="q5" data-answer="c">coffee is gross</button>
+            <br><br><br>
+        </div>
+
+        <div class="question">
+            <p> 6. Would you rather go out with friends, stay in with one friend, or do something by yourself? </p>
+            <img src="Images/bar.jpg" alt="out with friends">
+            <img src="Images/boardgame.webp" alt="one friend">
+            <img src="Images/alone.webp" alt="alone">
+            <br>
+
+            <button class="button" data-question="q6" data-answer="a">go out</button>
+            <button class="button" data-question="q6" data-answer="b">one friend is good</button>
+            <button class="button" data-question="q6" data-answer="c">i like to be alone</button>
+            <br><br><br>
+        </div>
+
+        <div class="question">
+            <p> 7. Would you rather work from home or in an office?</p>
+
+            <img src="Images/home.webp" alt="work from home">
+            <img src="Images/office.jpg" alt="office">
+            <br>
+
+            <button class="button" data-question="q7" data-answer="a">office</button>
+            <button class="button" data-question="q7" data-answer="b">home</button>
+
+        </div>
+
+        <br>
+        <button class="submit" data-question="submit" data-answer="submit">SUBMIT</button>
+
+    </div>
+
+    <div class="onSubmit" style="display: none;"> 
+        <h3 id="resultText"></h3>
+        
+        <button id="wikiButton" style="display: none"> SEE ANIMAL</button>
+    </div>
+
+</body>
+
+</html>

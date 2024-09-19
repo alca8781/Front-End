@@ -1,0 +1,80 @@
+html{
+    background-color: rgb(213, 217, 224);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 40pt;
+    text-align: center;
+    color: green; 
+}
+h2{
+    text-align: center;
+    font-size: 20px;
+}
+h3{
+    text-align: center;
+    font-size: 20pt;
+    background-color: rgb(45, 77, 147);
+    padding: 20pt;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.top{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+.top img{
+    height: auto;
+    width: 90%; 
+    margin-bottom: 30px;
+    border: 12px solid green; 
+}
+
+
+#AnimalQuiz{
+    align-items: center;
+    margin-left: 200px; 
+    
+}
+
+.question img{ 
+    height: 200px;
+    width: auto;
+    margin: 2px; 
+}
+
+p{
+    font-size: 15px;
+    
+}
+.button{ 
+    padding: 10px;
+    align-items: center;
+}
+
+.button.clicked{
+    background-color: green;
+}
+
+.submit{
+    background-color: green;
+    color: white; 
+    padding: 20px; 
+    border: 3px solid white;
+    margin-top: 20pt;
+    font-size: 15pt;
+}
+
+
+#wikiButton{
+    display: flex;
+    align-items: center;
+    padding: 10pt; 
+    text-align: center;
+    color:rgb(255, 255, 255); 
+    background-color: rgb(45, 77, 147);
+
+}

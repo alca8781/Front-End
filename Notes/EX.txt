@@ -1,0 +1,46 @@
+HTML 
+
+    images 
+    <img src="symphony.jpeg" alt="dark stage with orchestra"> 
+
+    text 
+    <h1> </h1>
+    <h2> </h2>
+    <h3> </h3>
+    <h4> </h4>
+    <h5> </h5>
+    <h6> </h6>
+    <p> </p>
+    <article> </article>
+
+    class / id 
+    <div id = "css id"> </div>
+    <div class =" css class"> </div>
+
+
+CSS 
+
+    screen size 
+        @media screen and (min-width: 0000px){
+            #widescreen{
+            }
+
+        }
+
+    class 
+        .className {
+        }
+
+    id
+        #idName{
+        }
+        
+        #idName p{
+            // element within an id 
+        }
+
+    elements
+        h1{ 
+        }
+
+JS 

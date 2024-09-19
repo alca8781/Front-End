@@ -1,0 +1,6 @@
+DEBUGGING 
+
+console.log()
+    -> console.log("i made it to this function or if statement"); 
+    -> console.log(someVariableThatI.needToKnow.theValue); 
+    
