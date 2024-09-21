@@ -1,0 +1,40 @@
+Solar System Trivia 
+
+JS accesses the document using document.querySelector finds the form tag 
+inside the form is the quiz which is accessed through the document.getElementById('start-button')
+
+There are 2 fields within the form -> round 1 & round 2 
+Each round has 2 questions thats are pulled from the id in the html 
+The HTML shows the question and the JS processes the user answer 
+    each question has an id for input and reaction 
+
+    input: question id 
+    reactionArea: where user answer is stored/ processed 
+    answer : the correct answer to the question (string)
+
+
+startGame()
+    loads the JS to run the code (button)
+    round 1 appears on the screen and the start button is hidden 
+    for loop displays question 
+
+answerQuestion() 
+    initializes a score variable to 0
+    if the user input matches the answer the score increases by 1 
+    if the answer does not match the score remains the same 
+    
+    
+startRoundTwo(event)
+    starts second round of the game 
+    hide start next round button 
+
+    loop through questions 
+    update score 
+
+    display finish game button 
+
+finishGame(event)
+    initialize sum 
+    loop through score and adds to total sum 
+
+    display score as sum out of total length which is correct out of total questions 
