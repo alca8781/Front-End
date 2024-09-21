@@ -1,0 +1,59 @@
+APIs AJAX & JSON 
+--------------------
+
+API -> application protocal interface
+    - expose parts of applications to be used by another application 
+    - can facilitate communication between applications in different senarios 
+        ex: twitter api 
+            open AI api 
+
+
+Browser API 
+    - DOM 
+    - Fetch API 
+    - Canvas API
+    - File API 
+    - Clipboard API 
+    - WebAudio API 
+    - WebGL API 
+
+
+Server API & 3ed Party API 
+    REST : Represtnational State Transfer 
+    
+
+AJAX -> asynchronous javascript and xml 
+    - coding pattern for APIs 
+
+JSON -> javascript object notation 
+    - data storage format 
+    - designed around javascript objects 
+    
+    {
+        "name" : "Front-End Web Dev", 
+        "id" : 4630, 
+        "code" : "ATLS-4630", 
+        "students" : 15
+    }
+
+        - keys are strings 
+        - need " " for both 
+
+Fetch API 
+    - allows you to make requests to othr servers and process them in JS as promises 
+
+    fetch(url)
+        .then(response => response.json())
+        .then(json => doYourThing(json))
+        .catch(e => console.errpr(e)); 
+
+
+Promise 
+    - asynch code 
+
+    chain with .then() 
+    take a callback function 
+
+    fetch(url)
+    .then(response => console.log(response)); 
+
