@@ -20,7 +20,8 @@ document.querySelectorAll('.button').forEach(button => {
     button.addEventListener('click', function () {
         const questionId = this.getAttribute('data-question'); 
 
-        // disable buttons to prevent multiple answers by selecting a question ID and all elements with that id and showing as disabled 
+        // disable buttons to prevent multiple answers by selecting a question ID and all 
+        //elements with that id and showing as disabled 
         document.querySelectorAll(`.button[data-question="${questionId}"]`).forEach(btn => {
             btn.classList.add('disabled');
             btn.disabled = true; 

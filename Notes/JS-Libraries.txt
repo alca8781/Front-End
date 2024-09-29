@@ -1,0 +1,41 @@
+Javascript Libraries 
+------------------------------
+a piece of code (usually written by someone else) that you import to your code and directly use 
+
+    - screen transitions 
+    - animations 
+    - 2D & 3D rendering 
+    - large scale data manipulation 
+
+    ex : google "javascript library for ... "
+
+-----------------------------------------------------------
+
+lodash  
+    - utilities for arrays 
+    
+1. vite is build tool -> go to parent folder 
+2. open terminal type : npx 
+3.                      create-vite 
+4.  npm install   
+
+import _ from 'lodash'; 
+const myArr = ['first', 'second', 'third', 'fourth']; 
+console.log(_chunk(myArr, 2))  // breaks array into 2 seperate arrays with even number of elements in each 
+
+
+function scrolllistener(){
+    console.log(window.scrollY)
+}
+- debounce waits amount of time before calling function (function, miliseconds)
+const debouncedScrollListener = ._debounce(scrolllistener, 250)
+window.addEventListener('scroll', debouncedScrollListener); 
+
+- throttle will prevent functuon from running more than once in a given time period 
+const throttleScrollListener = ._throttle(scrolllistener, 250); 
+window.addEventListener('scroll', throttleScrollListener); 
+
+==============
+Project 
+
+console : npm run build 
