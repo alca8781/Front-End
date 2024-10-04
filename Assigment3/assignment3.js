@@ -24,8 +24,6 @@ async function showColor() {
             colorRGB.innerText = `RGB: ${color.rgb}`;
             colorHSL.innerText = `HSL: ${color.hsl}`;
 
-
-
         })
 }
 
